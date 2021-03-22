@@ -115,6 +115,7 @@ set tabstop=4
 "Make System Clipboard Default Clipboard"
 set clipboard=unnamedplus
 set paste
+set go+=a
 
 "Confirm on Exit"
 set confirm
