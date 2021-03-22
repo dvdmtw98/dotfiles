@@ -8,3 +8,4 @@ Collection of various configuration files (Dotfiles)
 ## Tmux Configuration
 * Status Line Reference : https://gist.github.com/rajanand02/9407361
 * To allow vim themes to work in tmux add `alias tmux='tmux -2'` in `.bashrc` or `.zshrc`
+* Tmux Status Bar unselected status does not show properly in WSL
