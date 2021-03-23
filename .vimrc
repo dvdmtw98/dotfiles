@@ -3,16 +3,16 @@ set number
 set relativenumber
 
 "Set Theme"
-colo monokai
+colorscheme monokai
 
 "Status Line Configuration"
-" status bar colors
+"Status Bar Colors
 au InsertEnter * hi statusline guifg=black guibg=#d7afff ctermfg=black ctermbg=magenta
 au InsertLeave * hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 hi statusline guifg=black guibg=#8fbfdc ctermfg=black ctermbg=cyan
 
-" Status line
-" default: set statusline=%f\ %h%w%m%r\ %=%(%l,%c%V\ %=\ %P%)
+"Default Status line
+"set statusline=%f\ %h%w%m%r\ %=%(%l,%c%V\ %=\ %P%)
 
 " Function: return current mode
 " abort -> function will abort soon as error detected
@@ -26,7 +26,7 @@ function! ModeCurrent() abort
     return l:current_status_mode
 endfunction
 
-" Status Line Custom
+"Status Line (Mode Display)
 let g:currentmode={
     \ 'n'  : 'Normal',
     \ 'no' : 'Normal·Operator Pending',
