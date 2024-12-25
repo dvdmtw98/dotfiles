@@ -1,0 +1,15 @@
+! Enable Youtube end cards
+#@#.ytp-ce-element
+#@#.ytp-cards-teaser
+
+! Remove adblock banner from Outlook (Free/Personal)
+outlook.live.com##:xpath(//i[@data-icon-name="OutlookLogo"]/parent::div/parent::div/parent::div)
+
+! Remove Pinterest results from Google/Startpage
+google.*##.g:has(a[href*=".pinterest."])
+google.*##a[href*=".pinterest."]:nth-ancestor(1)
+startpage.*##.g:has(a[href*=".pinterest."])
+startpage.*##a[href*=".pinterest."]:nth-ancestor(1)
+
+! Remove sign-in with Google prompts
+||accounts.google.com/gsi/*$xhr,script,3p
