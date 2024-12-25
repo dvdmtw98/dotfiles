@@ -1,0 +1,157 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "padding": {
+            "left": 2,
+            "right": 2
+        }
+    },
+	"display": {
+		"separator": "    ",
+		"constants": [
+			"──────────────────────────────" // {$1}, used in Custom module
+		],
+		"key": {
+			"type": "both",
+			"paddingLeft": 2
+		}
+	},
+	"modules": [
+		{
+			"type": "custom",
+			// {#1} is equivalent to `\u001b[1m`. {#} is equivalent to `\u001b[m`
+			"format": "┌{$1} {#1}Hardware Information{#} {$1}┐"
+		},
+		"break",
+		{
+			"key": "Machine      ",
+			"type": "host"
+		},
+		{
+			"key": "CPU          ",
+			"type": "cpu"
+		},
+		{
+			"key": "GPU          ",
+			"type": "gpu"
+		},
+		{
+			"key": "Disk         ",
+			"type": "disk"
+		},
+		{
+			"key": "Memory       ",
+			"type": "memory"
+		},
+		{
+			"key": "Swap         ",
+			"type": "swap"
+		},
+		{
+			"key": "Display      ",
+			"type": "display"
+		},
+		{
+			"key": "Brightness   ",
+			"type": "brightness"
+		},
+		{
+			"key": "Battery      ",
+			"type": "battery"
+		},
+		{
+			"key": "Power        ",
+			"type": "poweradapter"
+		},
+		{
+			"key": "Bluetooth    ",
+			"type": "bluetooth"
+		},
+		{
+			"key": "Sound        ",
+			"type": "sound"
+		},
+		{
+			"key": "Controller   ",
+			"type": "gamepad"
+		},
+		"break",
+		{
+			"type": "custom",
+			"format": "├{$1} {#1}Software Information{#} {$1}┤"
+		},
+		"break",
+		{
+			"key": "Username     ", // Title module has no key by default, so that icon is not displayed
+			"type": "title",
+			"keyIcon": "",
+			"format": "{user-name}@{host-name}"
+		},
+		{
+			"key": "OS           ",
+			"type": "os"
+		},
+		{
+			"key": "Kernel       ",
+			"type": "kernel"
+		},
+		{
+			"key": "LM           ",
+			"type": "lm"
+		},
+		{
+			"key": "DE           ",
+			"type": "de"
+		},
+		{
+			"key": "WM           ",
+			"type": "wm"
+		},
+		{
+			"key": "Shell        ",
+			"type": "shell"
+		},
+		{
+			"key": "Terminal     ",
+			"type": "terminal"
+		},
+		{
+			"key": "Terminal Font",
+			"type": "terminalfont"
+		},
+		{
+			"key": "Theme        ",
+			"type": "theme"
+		},
+		{
+			"key": "Cursor       ",
+			"type": "cursor"
+		},
+		{
+			"key": "Icons        ",
+			"type": "icons"
+		},
+		{
+			"key": "Font         ",
+			"type": "font"
+		},
+		{
+			"key": "Packages     ",
+			"type": "packages"
+		},
+		{
+			"key": "Uptime       ",
+			"type": "uptime"
+		},
+		"break",
+		{
+			"type": "custom",
+			"format": "└{$1}──────────────────────{$1}┘"
+		},
+		{
+			"type": "colors",
+			"paddingLeft": 2,
+			"symbol": "square"
+		}
+	]
+}

@@ -1,12 +1,29 @@
-# David's Dotfiles
-Collection of various configuration files (Dotfiles)
+# Dotfiles
+This repository stores config files (settings) for various application (Windows & Linux)
 
-## Vim Cofiguration
-* monokai.vim file goes in `/usr/share/vim/vim*/colors folder`
-* Status Line Reference : https://gist.github.com/meskarune/57b613907ebd1df67eb7bdb83c6e6641
+## Common
 
-## Tmux Configuration
-* Status Line Reference : https://gist.github.com/rajanand02/9407361
-* To allow vim themes to work in tmux add `alias tmux='tmux -2'` in `.bashrc` or `.zshrc`
-* Tmux Status Bar window status does not show properly in WSL
-* To enable Copy to System Clipboard Install `xclip` : `sudo apt install xclip`
+- **uBlock Origin**
+  - My custom filters for blocking/allowing certain elements
+  - Load filters: `Settings -> My Filters -> Import and Append`
+
+## Linux
+
+- **IMWheel**
+  - Utility to tweak mouse scroll wheel settings
+  - Config: `~/.imwheelrc` 
+- **Xinput**
+  - Utility to tweak the settings for input devices
+  - Config: `~/.xprofile`
+- **Fastfetch**
+  - Modern replacement for Neofetch. Used to show system information
+  - Config: `~/.config/fastfetch/.config.jsonc`
+- **Tmux**
+  - Terminal Multiplexer. Allows to have multiple panes inside the same window
+  - Config: `~/.config/tmux/tmux.conf`
+- **Zsh**
+  - Zsh theme and config
+  - `.zshenv` has to be present at `$HOME` to use custom location to store the config
+  - Config: `~/.zshenv`, `~/.config/zsh/.zshrc`, `~/.config/zsh/.zprofile`, `~/.config/zsh/.p10k.zsh`
+
+## Windows
