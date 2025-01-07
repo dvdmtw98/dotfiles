@@ -1,4 +1,8 @@
-if [ "$TMUX" = "" ]; then tmux new \; set-option destroy-unattached; fi
+# Start Tmux if not already in Tmux and not using VSCode terminal
+if [[ -z "$TMUX" && ! "$(ps -o comm= -p $PPID)" =~ "code" ]]; then
+    # Attach to session if it already exists, else create a new one
+    tmux attach-session || tmux new-session
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -9,6 +13,7 @@ fi
 
 export PATH="$PATH:/media/shared/Code/Scripts"
 export ZSH_PLUGINS="/home/david/.config/zsh/plugins"
+WORDCHARS=${WORDCHARS//[\/&.;]/}                                 # Don't consider certain characters part of the word
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source $ZSH_PLUGINS/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -17,7 +22,7 @@ source $ZSH_PLUGINS/fzf-tab/fzf-tab.plugin.zsh
 
 fpath=($ZSH_PLUGINS/zsh-completions/src $fpath)
 
-autoload -U compinit colors zcalc
+autoload -Uz compinit colors zcalc
 compinit -d
 colors
 
@@ -51,7 +56,7 @@ setopt hist_ignore_dups
 setopt hist_find_no_dups
 
 setopt correct                                                  # Auto correct mistakes
-setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
+setopt extendedglob                                             # Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
 setopt nocheckjobs                                              # Don't warn about running processes when exiting
@@ -76,11 +81,29 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # ZSH_HIGHLIGHT_STYLES[path]='none'
 
+alias sudo='nocorrect sudo '
+
 alias update-all="yay -Syu && flatpak update -y"
 alias cleanup="yay -Yc --noconfirm && yay -Sc --noconfirm && flatpak uninstall --unused -y"
 
 alias cat="bat"
+
 alias cp="cp -i"                                                # Confirm before overwriting something
+alias mv="mv -i"
+alias rm="rm -i"
+alias ln="ln -i"
+alias mkdir="mkdir -pv"
+
+alias vim="nvim"
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+alias vi="\vim" 						                        # '\' disables alias
+alias edit-nvim="cd ~/.config/nvim && nvim ."
+
+alias reload-zsh="source ~/.config/zsh/.zshrc"
+alias edit-zsh="nvim ~/.config/zsh/.zshrc"
+
+alias reload-tmux="source ~/.config/tmux/tmux.conf"
+alias edit-tmux="nvim ~/.config/tmux/tmux.conf"
 
 alias ls="eza --icons --color=always"
 alias ll="eza --long --header --group --icons --all --color=always"
@@ -112,6 +135,13 @@ export FZF_DEFAULT_OPTS=" \
 export NVM_DIR="/usr/share/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+# Vim cursor fix
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)
 
 eval "$(dircolors -b)"
 eval "$(fzf --zsh)"

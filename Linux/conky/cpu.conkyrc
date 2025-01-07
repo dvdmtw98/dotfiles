@@ -1,0 +1,89 @@
+conky.config = {
+	background = true, 							-- forked to background
+	double_buffer = true,						-- Use the Xdbe extension? (eliminates flicker)
+	if_up_strictness = 'address',				-- how strict if testing interface is up - up, link or address
+	no_buffers = true,							-- Subtract (file system) buffers from used memory?
+	temperature_unit = 'celsius',				-- fahrenheit or celsius
+	text_buffer_size = 2048,					-- size of buffer for display of content of large variables - default 256
+    update_interval = 4,						-- update interval
+	imlib_cache_size = 0,                       -- disable image cache to get a new spotify cover per song
+
+	alignment = 'top_right',						
+	gap_x = 0,									-- pixels between right or left border
+	gap_y = 250,									-- pixels between bottom or left border
+	minimum_height = 300,						-- minimum height of window
+	minimum_width = 300,						-- minimum height of window
+    maximum_width = 300,
+
+	border_width = 1, 							-- border width in pixels
+    border_inner_margin = 10,
+	default_bar_width = 0,					    -- default is 0 - full width
+	default_bar_height = 10,					-- default is 6
+	default_shade_color = '#000000',			-- default shading colour
+	default_outline_color = '#000000',			-- default outline colour
+	draw_borders = false,						-- draw borders around text
+	draw_graph_borders = true,					-- draw borders around graphs
+	draw_shades = false,						-- draw shades
+	draw_outline = false,						-- draw outline
+
+	extra_newline = false,						-- extra newline at the end
+	format_human_readable = true,				-- KiB, MiB rather then number of bytes
+	font = 'Inter Mono:size=10',  				-- font for complete conky unless in code defined
+	max_text_width = 0,							-- 0 will make sure line does not get broken if width too small
+	override_utf8_locale = true,				-- force UTF8 requires xft
+	short_units = false,					    -- shorten units from KiB to k
+	top_name_width = 60,						-- width for $top name value default 15
+	uppercase = false,							-- uppercase or not
+	use_spacer = 'none',						-- adds spaces around certain objects to align - default none
+	use_xft = true,								-- xft font - anti-aliased font
+	xftalpha = 1,								-- alpha of the xft font - between 0-1
+    
+	own_window = true,							-- create your own window to draw
+	own_window_argb_value = 140,			    -- real transparency - composite manager required 0-255
+	own_window_argb_visual = true,				-- use ARGB - composite manager required
+	own_window_colour = '#000000',				-- set colour if own_window_transparent no
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+	own_window_transparent = false,				-- if own_window_argb_visual is true sets background opacity 0%
+	own_window_title = 'conky_cpu',			    -- set the name manually  - default conky "hostname"
+	own_window_type = 'normal',				    -- if own_window true options are: normal/override/dock/desktop/panel
+
+	default_color = '#D9DDE2',  				-- default color and border color
+	color1 = '#FF0000',
+	color2 = '#597AA1',
+	color3 = '#cccccc',
+	color4 = '#D9BC83',
+	color5 = '#00BFFF',
+	color6 = '#FFFFFF',
+};
+
+conky.text = [[
+${color5}${font Roboto:size=10}C P U  ${hr 2}${font}${color}${voffset 8}
+${color2}Name:${color}${alignr}${exec cat /proc/cpuinfo | grep 'model name' | sed -e 's/model name.*: //'| uniq | cut -d ' ' -f 1-3}
+${color2}CPU Temp:${color} ${alignr}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
+${color2}Usage:${color}${alignr}${cpu cpu0}%
+${cpugraph cpu0 20,300}${voffset 16}
+${color2}Core 1${color}${alignc}${freq_g 1} GHz${alignr}${cpu cpu1}%
+${cpubar cpu1}
+${color2}Core 2${color}${alignc}${freq_g 2} GHz${alignr}${cpu cpu2}%
+${cpubar cpu2}
+${color2}Core 3${color}${alignc}${freq_g 3} GHz${alignr}${cpu cpu3}%
+${cpubar cpu3}
+${color2}Core 4${color}${alignc}${freq_g 4} GHz${alignr}${cpu cpu4}%
+${cpubar cpu4}
+${color2}Core 5${color}${alignc}${freq_g 5} GHz${alignr}${cpu cpu5}%
+${cpubar cpu5}
+${color2}Core 6${color}${alignc}${freq_g 6} GHz${alignr}${cpu cpu6}%
+${cpubar cpu6}
+${color2}Core 7${color}${alignc}${freq_g 7} GHz${alignr}${cpu cpu7}%
+${cpubar cpu7}
+${color2}Core 8${color}${alignc}${freq_g 8} GHz${alignr}${cpu cpu8}%
+${cpubar cpu8}
+${color2}Processes: ${color}${processes}${alignr}${color2}Running: ${color}${running_processes}
+${color2}Threads: ${color}${threads}${alignr}${color2}Running: ${color}${running_threads}
+${voffset 8}${color2}Top Processes${goto 222}CPU%${goto 274}Mem%${color}
+${top name 1}${alignr} ${goto 222}${top cpu 1} ${goto 274}${top mem 1}
+${top name 2}${alignr} ${goto 222}${top cpu 2} ${goto 274}${top mem 2}
+${top name 3}${alignr} ${goto 222}${top cpu 3} ${goto 274}${top mem 3}
+${top name 4}${alignr} ${goto 222}${top cpu 4} ${goto 274}${top mem 4}
+${top name 5}${alignr} ${goto 222}${top cpu 5} ${goto 274}${top mem 5}
+]]

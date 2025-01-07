@@ -1,0 +1,31 @@
+return {
+	"akinsho/bufferline.nvim",
+	version = "*",
+	dependencies = "nvim-tree/nvim-web-devicons",
+	config = function()
+		require("bufferline").setup({
+			options = {
+				diagnostics = "nvim_lsp",
+				diagnostics_indicator = function(count, level)
+					local icon = level:match("error") and " " or " "
+					return " " .. icon .. count
+				end,
+				offsets = {
+					{
+						filetype = "neo-tree",
+						text = "",
+						text_align = "center",
+						separator = false,
+					},
+				},
+				separator_style = "slant",
+			},
+		})
+
+        vim.keymap.set("n", "<Leader>bo", "<CMD>enew<CR>", { desc = "Open New Buffer" })
+        vim.keymap.set("n", "<Leader>bx", "<CMD>bd<CR>", { desc = "Close Current Buffer" })
+		vim.keymap.set("n", "<Leader>bn", "<CMD>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
+		vim.keymap.set("n", "<Leader>bp", "<CMD>BufferLineCyclePrev<CR>", { desc = "Previous Buffer" })
+        vim.keymap.set("n", "<Leader>bf", "<CMD>enew %<CR>", { desc = "Open Current file in New Buffer" })
+	end,
+}
