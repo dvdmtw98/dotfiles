@@ -23,6 +23,9 @@ This repository stores config files (settings) for various application (Windows 
 - **Fastfetch**
   - Modern replacement for Neofetch. Used to show system information
   - Config: `~/.config/fastfetch/.config.jsonc`
+- **MPV**
+  - A simple video player that can be used entirely from the command line
+  - Config: `~/.config/mpv`
 - **Conky**
   - Allows to create widgets to display system information
   - Widgets are written in `.conkyrc` files

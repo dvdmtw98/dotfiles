@@ -13,6 +13,8 @@ fi
 
 export PATH="$PATH:/media/shared/Code/Scripts"
 export ZSH_PLUGINS="/home/david/.config/zsh/plugins"
+export EDITOR="nvim"
+
 WORDCHARS=${WORDCHARS//[\/&.;]/}                                 # Don't consider certain characters part of the word
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
