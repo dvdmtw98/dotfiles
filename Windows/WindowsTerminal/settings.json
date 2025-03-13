@@ -5,24 +5,14 @@
     [
         {
             "command": "closePane",
-            "id": "User.closePane",
-            "keys": "ctrl+shift+w"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+t"
-        },
-        {
-            "command": "unbound",
-            "keys": "ctrl+w"
+            "id": "User.closePane"
         },
         {
             "command": 
             {
                 "action": "newTab"
             },
-            "id": "User.newTab.5DEADB41",
-            "keys": "ctrl+shift+t"
+            "id": "User.newTab.5DEADB41"
         }
     ],
     "alwaysOnTop": false,
@@ -35,6 +25,25 @@
     "focusFollowMouse": false,
     "initialCols": 120,
     "initialRows": 35,
+    "keybindings": 
+    [
+        {
+            "id": "User.closePane",
+            "keys": "ctrl+shift+w"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+t"
+        },
+        {
+            "id": null,
+            "keys": "ctrl+w"
+        },
+        {
+            "id": "User.newTab.5DEADB41",
+            "keys": "ctrl+shift+t"
+        }
+    ],
     "launchMode": "default",
     "newTabMenu": 
     [
@@ -122,6 +131,12 @@
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
                 "startingDirectory": null
+            },
+            {
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+                "hidden": false,
+                "name": "Git Bash",
+                "source": "Git"
             }
         ]
     },
@@ -201,7 +216,7 @@
     "showTerminalTitleInTitlebar": true,
     "snapToGridOnResize": true,
     "startOnUserLogin": true,
-    "startupActions": "",
+    "startupActions": null,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
     "theme": "system",
