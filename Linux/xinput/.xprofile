@@ -1,1 +1,4 @@
 xinput set-prop "SYNA7DB5:00 06CB:CD41 Touchpad" "libinput Scrolling Pixel Distance" 50
+xinput set-prop "SYNA7DB5:00 06CB:CD41 Mouse" "libinput Scrolling Pixel Distance" 50
+xinput set-prop "Logitech G502 X LIGHTSPEED" "libinput Scrolling Pixel Distance" 50
+

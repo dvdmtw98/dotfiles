@@ -67,7 +67,7 @@
                 "face": "Cascadia Code NF",
                 "size": 12
             },
-            "opacity": 90,
+            "opacity": 98,
             "padding": "4",
             "suppressApplicationTitle": true,
             "useAcrylic": false
@@ -118,12 +118,10 @@
                 "name": "Win-KeX"
             },
             {
-                "commandline": "\"%PROGRAMFILES%\\git\\usr\\bin\\bash.exe\" -i -l",
-                "guid": "{00000000-0000-0000-ba54-000000000002}",
+                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
-                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Git Bash",
-                "startingDirectory": null
+                "source": "Git"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -131,12 +129,6 @@
                 "name": "Azure Cloud Shell",
                 "source": "Windows.Terminal.Azure",
                 "startingDirectory": null
-            },
-            {
-                "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
-                "hidden": false,
-                "name": "Git Bash",
-                "source": "Git"
             }
         ]
     },
