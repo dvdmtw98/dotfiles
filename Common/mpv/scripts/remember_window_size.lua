@@ -6,11 +6,12 @@ local config_path = utils.join_path(state_dir, "window_size.conf")
 local default_geometry = "800x600" -- Fallback geometry if none is available
 
 -- Debug function for logging (only enabled when there's an issue)
-local debug_enabled = false  -- Set to true to enable debugging
+local debug_enabled = false -- Set to true to enable debugging
 
 local function debug_log(message)
     if debug_enabled then
-        local log_file = io.open("/tmp/mpv_debug.log", "a")
+        local log_path = utils.join_path(state_dir, "mpv_debug.log")
+        local log_file = io.open(log_path, "a")
         if log_file then
             log_file:write(message .. "\n")
             log_file:close()

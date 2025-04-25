@@ -1,2 +1,10 @@
+# IDE Ignored Files
 .vscode
+
+# Neovim Ignore Files
 Linux/nvim/*.json
+
+# MPV Ignore Files
+Common/mpv/cache
+Common/mpv/watch_later
+Common/mpv/window_size.conf
