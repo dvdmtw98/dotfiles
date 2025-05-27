@@ -1,67 +1,107 @@
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
+# https://ohmyposh.dev/docs/
+
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
 version = 3
 final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
+# Secondary prompt (continuation lines)
 [secondary_prompt]
-  template = '❯❯ '
-  foreground = 'magenta'
-  background = 'transparent'
+template = '❯❯ '
+foreground = 'magenta'
+background = 'transparent'
 
+# Main prompt block (left-aligned)
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
+type = 'prompt'
+alignment = 'left'
+newline = true
 
-  [[blocks.segments]]
+    # Current directory path
+    [[blocks.segments]]
+    type = 'path'
     template = '{{ .Path }}'
     foreground = 'blue'
-    background = 'transparent'
-    type = 'path'
+    style = 'plain'
+        [blocks.segments.properties]
+        style = 'full'  # Show full path
+        cache_duration = 'none'
+
+    # Python Virtual Environment
+    [[blocks.segments]]
+    type = 'python'
+    foreground = 'green'
+    template = ' {{ if .Venv }} {{ .Venv }} {{ .Full }}{{ end }} '
+    style = 'plain'
+        [blocks.segments.properties]
+        display_mode = "context"
+
+    # Node.js Version
+    [[blocks.segments]]
+    type = 'node'
+    foreground = 'yellow'
+    template = '  {{ .Full }} '  # Explicit Node.js detection
+    style = 'plain'
+        [blocks.segments.properties]
+        fetch_version = true  # Fetch Node version if package.json exists
+
+    # Go Version
+    [[blocks.segments]]
+    type = 'go'
+    foreground = 'cyan'
+    template = '  {{ .Full }} '
+    style = 'plain'
+        [blocks.segments.properties]
+        enabled = true
+
+    # Ruby Version
+    [[blocks.segments]]
+    type = 'ruby'
+    foreground = 'red'
+    template = '  {{ .Full }} '
     style = 'plain'
 
-    [blocks.segments.properties]
-      cache_duration = 'none'
-      style = 'full'
-
-  [[blocks.segments]]
+    # Git status
+    [[blocks.segments]]
     template = ' {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>'
     foreground = 'p:grey'
-    background = 'transparent'
     type = 'git'
     style = 'plain'
+        [blocks.segments.properties]
+        branch_icon = ''
+        cache_duration = 'none'
+        commit_icon = '@'
+        fetch_status = true
+        up_icon = '⇡'
+        down_icon = '⇣'
 
-    [blocks.segments.properties]
-      branch_icon = ''
-      cache_duration = 'none'
-      commit_icon = '@'
-      fetch_status = true
-
+# Main prompt block (right-aligned)
 [[blocks]]
-  type = 'rprompt'
-  overflow = 'hidden'
+type = 'rprompt'
+overflow = 'hidden'
 
-  [[blocks.segments]]
+    # Command execution time
+    [[blocks.segments]]
     template = '{{ .FormattedMs }}'
     foreground = 'yellow'
     background = 'transparent'
     type = 'executiontime'
     style = 'plain'
+        [blocks.segments.properties]
+        cache_duration = 'none'
+        threshold = 5000
 
-    [blocks.segments.properties]
-      cache_duration = 'none'
-      threshold = 5000
-
+# Final prompt character (changes color based on exit code)
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
+type = 'prompt'
+alignment = 'left'
+newline = true
 
-  [[blocks.segments]]
-    template = '❯'
-    background = 'transparent'
+    [[blocks.segments]]
     type = 'text'
+    template = '❯'
     style = 'plain'
-    foreground_templates = ['{{if gt .Code 0}}red{{end}}', '{{if eq .Code 0}}magenta{{end}}']
-
-    [blocks.segments.properties]
-      cache_duration = 'none'
+    foreground_templates = [
+        '{{if gt .Code 0}}red{{end}}',
+        '{{if eq .Code 0}}magenta{{end}}'
+    ]

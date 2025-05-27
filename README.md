@@ -47,11 +47,18 @@ This repository stores config files (settings) for various application (Windows 
 
 - **PowerShell**
   - PowerShell configuration and theme
-  - PowerShell Config: `C:\Users\<user>\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
-  - Oh My Posh Theme: `C:\Users\<user>\AppData\Local\Programs\oh-my-posh\themes\zen.toml`
+  - PowerShell Config: `$PROFILE`
+  - Oh My Posh Theme: `%LOCALAPPDATA%\Programs\oh-my-posh\themes\zen.toml`
+  - Modules Installed
+    - Docker Completion
+    - Post-Git
+    - Posh-SShell
+    - PSFzf (Bug: [Text Alignment](https://github.com/kelleyma49/PSFzf/issues/274))
+    - PSReadLine
+    - Terminal-Icons
 - **Windows Terminal**
   - Modern Windows Terminal Host
-  - Config: `C:\Users\<user>\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+  - Config: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 - **Command Line Tools**
   - `bat` (Dependency: `less`)
   - `fd`

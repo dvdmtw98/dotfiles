@@ -2,9 +2,9 @@
 .vscode
 
 # Neovim Ignore Files
-Linux/nvim/*.json
+**/nvim/*.json
 
 # MPV Ignore Files
-Common/mpv/cache
-Common/mpv/watch_later
-Common/mpv/window_size.conf
+**/mpv/cache
+**/mpv/watch_later
+**/mpv/window_size.conf
