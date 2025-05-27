@@ -11,6 +11,10 @@ This repository stores config files (settings) for various application (Windows 
   - Linux Config: `~/.config/mpv`
   - Windows Config: `%INSTALL_DIR%\portable_config`
   - MD5 module (https://github.com/kikito/md5.lua)
+- **NeoVim**
+  - Modern Vim with advanced features and plugin support
+  - Linux Config: `~/.config/nvim`
+  - Windows Config: `%LOCALAPPDATA%\nvim`
 
 ## Linux
 
@@ -22,9 +26,6 @@ This repository stores config files (settings) for various application (Windows 
 - **Tmux**
   - Terminal Multiplexer. Allows to have multiple panes inside the same window
   - Config: `~/.config/tmux/tmux.conf`
-- **NeoVim**
-  - Modern Vim with advanced features and plugin support
-  - Config: `~/.config/nvim`
 - **Fastfetch**
   - Modern replacement for Neofetch. Used to show system information
   - Config: `~/.config/fastfetch/.config.jsonc`
@@ -51,3 +52,11 @@ This repository stores config files (settings) for various application (Windows 
 - **Windows Terminal**
   - Modern Windows Terminal Host
   - Config: `C:\Users\<user>\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+- **Command Line Tools**
+  - `bat` (Dependency: `less`)
+  - `fd`
+  - `fxf`
+  - `ripgrep`
+  - `zoxide`
+  - `ffmpeg`
+  - `yazi` (Dependency: `jq`, `ImageMagick`, `poppler`, `resvg`)

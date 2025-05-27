@@ -1,8 +1,8 @@
 # Start Tmux if not already in Tmux and not using VSCode terminal
-if [[ -z "$TMUX" && ! "$(ps -o comm= -p $PPID)" =~ "code" ]]; then
-    # Attach to session if it already exists, else create a new one
-    tmux attach-session || tmux new-session
-fi
+# if [[ -z "$TMUX" && ! "$(ps -o comm= -p $PPID)" =~ "code" ]]; then
+#    # Attach to session if it already exists, else create a new one
+#    tmux attach-session || tmux new-session
+# fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]

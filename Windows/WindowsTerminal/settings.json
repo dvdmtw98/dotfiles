@@ -4,19 +4,21 @@
     "actions": 
     [
         {
-            "command": "closePane",
-            "id": "User.closePane"
-        },
-        {
             "command": 
             {
-                "action": "newTab"
+                "action": "globalSummon",
+                "desktop": "toCurrent",
+                "dropdownDuration": 250,
+                "monitor": "toMouse",
+                "name": "_quake",
+                "toggleVisibility": true
             },
-            "id": "User.newTab.5DEADB41"
+            "id": "User.quakeMode.F1E129A4"
         }
     ],
     "alwaysOnTop": false,
     "alwaysShowTabs": true,
+    "compatibility.allowHeadless": false,
     "confirmCloseAllTabs": true,
     "copyFormatting": "all",
     "copyOnSelect": false,
@@ -28,16 +30,12 @@
     "keybindings": 
     [
         {
+            "id": "User.quakeMode.F1E129A4",
+            "keys": "ctrl+`"
+        },
+        {
             "id": "User.closePane",
             "keys": "ctrl+shift+w"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+t"
-        },
-        {
-            "id": null,
-            "keys": "ctrl+w"
         },
         {
             "id": "User.newTab.5DEADB41",
@@ -67,7 +65,7 @@
                 "face": "Cascadia Code NF",
                 "size": 12
             },
-            "opacity": 98,
+            "opacity": 100,
             "padding": "4",
             "suppressApplicationTitle": true,
             "useAcrylic": false
@@ -122,6 +120,20 @@
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64",
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "icon": "C:/msys64/ucrt64.ico",
+                "name": "UCRT64 / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
+            },
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -msys",
+                "guid": "{71160544-14d8-4194-af25-d05feeac7233}",
+                "icon": "C:/msys64/msys2.ico",
+                "name": "MSYS / MSYS2",
+                "startingDirectory": "C:/msys64/home/%USERNAME%"
             },
             {
                 "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
@@ -207,7 +219,6 @@
     "showTabsInTitlebar": true,
     "showTerminalTitleInTitlebar": true,
     "snapToGridOnResize": true,
-    "startOnUserLogin": true,
     "startupActions": null,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
