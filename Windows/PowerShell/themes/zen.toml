@@ -24,14 +24,14 @@ newline = true
     foreground = 'blue'
     style = 'plain'
         [blocks.segments.properties]
-        style = 'full'  # Show full path
+        style = 'full'
         cache_duration = 'none'
 
     # Python Virtual Environment
     [[blocks.segments]]
     type = 'python'
     foreground = 'green'
-    template = ' {{ if .Venv }} {{ .Venv }} {{ .Full }}{{ end }} '
+    template = ' {{ if .Venv }} {{ .Venv }} {{ .Full }}{{ end }}'
     style = 'plain'
         [blocks.segments.properties]
         display_mode = "context"
@@ -40,16 +40,16 @@ newline = true
     [[blocks.segments]]
     type = 'node'
     foreground = 'yellow'
-    template = '  {{ .Full }} '  # Explicit Node.js detection
+    template = '  {{ .Full }}'
     style = 'plain'
         [blocks.segments.properties]
-        fetch_version = true  # Fetch Node version if package.json exists
+        fetch_version = true
 
     # Go Version
     [[blocks.segments]]
     type = 'go'
     foreground = 'cyan'
-    template = '  {{ .Full }} '
+    template = '  {{ .Full }}'
     style = 'plain'
         [blocks.segments.properties]
         enabled = true
@@ -58,7 +58,7 @@ newline = true
     [[blocks.segments]]
     type = 'ruby'
     foreground = 'red'
-    template = '  {{ .Full }} '
+    template = '  {{ .Full }}'
     style = 'plain'
 
     # Git status

@@ -4,8 +4,9 @@ This repository stores config files (settings) for various application (Windows 
 ## Common
 
 - **uBlock Origin**
-  - My custom filters for blocking/allowing certain elements
-  - Load filters: `Settings -> My Filters -> Import and Append`
+  - Custom rules for blocking/allowing certain elements
+  - Load Rules: `Settings -> My Filters -> Import and Append`
+  - Additional Filters: [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
 - **MPV**
   - A simple video player that can be used entirely from the command line
   - Linux Config: `~/.config/mpv`
@@ -59,6 +60,9 @@ This repository stores config files (settings) for various application (Windows 
 - **Windows Terminal**
   - Modern Windows Terminal Host
   - Config: `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+- **AutoHotkey**
+  - Automation Scripting Language
+  - Config: `%USERPROFILE%\Documents\AutoHotkey`
 - **Command Line Tools**
   - `bat` (Dependency: `less`)
   - `fd`
