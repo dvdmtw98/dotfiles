@@ -14,6 +14,7 @@ fi
 export PATH="$PATH:/media/shared/Code/Scripts"
 export ZSH_PLUGINS="/home/david/.config/zsh/plugins"
 export EDITOR="nvim"
+export MOZ_USE_XINPUT2=1
 
 WORDCHARS=${WORDCHARS//[\/&.;]/}                                 # Don't consider certain characters part of the word
 
