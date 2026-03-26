@@ -1,22 +1,6 @@
 # Dotfiles
 This repository stores config files (settings) for various application (Windows & Linux)
 
-## Common
-
-- **uBlock Origin**
-  - Custom rules for blocking/allowing certain elements
-  - Load Rules: `Settings -> My Filters -> Import and Append`
-  - Additional Filters: [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
-- **MPV**
-  - A simple video player that can be used entirely from the command line
-  - Linux Config: `~/.config/mpv`
-  - Windows Config: `%INSTALL_DIR%\portable_config`
-  - MD5 module (https://github.com/kikito/md5.lua)
-- **NeoVim**
-  - Modern Vim with advanced features and plugin support
-  - Linux Config: `~/.config/nvim`
-  - Windows Config: `%LOCALAPPDATA%\nvim`
-
 ## Linux
 
 - **Zsh**
@@ -34,12 +18,6 @@ This repository stores config files (settings) for various application (Windows 
   - Allows to create widgets to display system information
   - Widgets are written in `.conkyrc` files
   - Config: `~/.config/conky`
-- **IMWheel**
-  - Utility to tweak mouse scroll wheel settings
-  - Config: `~/.imwheelrc` 
-- **Xinput**
-  - Tweak the settings for input devices (using it to make touchpad scroll slower)
-  - Config: `~/.xprofile`
 - **Libinput Gesture**
   - Utility to map commands to touchpad gestures
   - Config: `~/.config/libinput-gestures.conf`
@@ -66,8 +44,28 @@ This repository stores config files (settings) for various application (Windows 
 - **Command Line Tools**
   - `bat` (Dependency: `less`)
   - `fd`
-  - `fxf`
+  - `fzf`
   - `ripgrep`
   - `zoxide`
   - `ffmpeg`
-  - `yazi` (Dependency: `jq`, `ImageMagick`, `poppler`, `resvg`)
+
+```cmd
+mklink "D:\link.txt" "E:\target.txt"
+mklink /D "D:\link_folder" "E:\real_folder"
+```
+
+## Common
+
+- **uBlock Origin**
+  - Custom rules for blocking/allowing certain elements
+  - Load Rules: `Settings -> My Filters -> Import and Append`
+  - Additional Filters: [Actually Legitimate URL Shortener Tool](https://github.com/DandelionSprout/adfilt/blob/master/LegitimateURLShortener.txt)
+- **MPV**
+  - A simple video player that can be used entirely from the command line
+  - Linux Config: `~/.config/mpv`
+  - Windows Config: `%INSTALL_DIR%\portable_config`
+  - MD5 module (https://github.com/kikito/md5.lua)
+- **NeoVim**
+  - Modern Vim with advanced features and plugin support
+  - Linux Config: `~/.config/nvim`
+  - Windows Config: `%LOCALAPPDATA%\nvim`

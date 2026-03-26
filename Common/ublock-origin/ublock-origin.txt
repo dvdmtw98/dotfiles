@@ -16,3 +16,6 @@ startpage.*##a[href*=".pinterest."]:nth-ancestor(1)
 
 ! Disable Google AI Overview
 google.com##.hdzaWe
+
+! Rotten Tomatoes
+www.rottentomatoes###main > overlay-base

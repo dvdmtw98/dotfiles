@@ -42,6 +42,8 @@ Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
 $env:FZF_DEFAULT_COMMAND = 'fd --type f --hidden --follow --exclude .git'
 $env:FZF_DEFAULT_OPTS = '--layout=reverse --inline-info --ansi'
 
+$env:BAT_PAGER="less -RFK"
+
 # Zoxide Config
 Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
@@ -56,17 +58,6 @@ Import-Module -Name Microsoft.WinGet.CommandNotFound
 Import-Module posh-git
 Import-Module posh-sshell
 Start-SshAgent -Quiet
-
-# Yazi Config
-function y {
-    $tmp = [System.IO.Path]::GetTempFileName()
-    yazi $args --cwd-file="$tmp"
-    $cwd = Get-Content -Path $tmp -Encoding UTF8
-    if (-not [String]::IsNullOrEmpty($cwd) -and $cwd -ne $PWD.Path) {
-        Set-Location -LiteralPath ([System.IO.Path]::GetFullPath($cwd))
-    }
-    Remove-Item -Path $tmp
-}
 
 # Vim Cursor Fix
 function nvim {
