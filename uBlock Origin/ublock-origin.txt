@@ -1,0 +1,24 @@
+! Re-enable Youtube End cards
+#@#.ytp-ce-element
+#@#.ytp-cards-teaser
+
+! YouTube (Interruption Problem Popup)
+youtube.com##.paper-toast-open.yt-notification-action-renderer.style-scope.toast-button
+
+! Remove Outlook Ad Block Banner
+outlook.live.com##:xpath(//i[@data-icon-name="OutlookLogo"]/parent::div/parent::div/parent::div)
+
+! Remove Pinterest Results from Search
+google.*##.g:has(a[href*=".pinterest."])
+google.*##a[href*=".pinterest."]:nth-ancestor(1)
+startpage.*##.g:has(a[href*=".pinterest."])
+startpage.*##a[href*=".pinterest."]:nth-ancestor(1)
+
+! Google Login Notification
+||accounts.google.com/gsi/*$xhr,script,3p
+
+! Disable Google AI Overview
+google.com##.hdzaWe
+
+! Rotten Tomatoes
+www.rottentomatoes###main > overlay-base

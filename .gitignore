@@ -3,8 +3,3 @@
 
 # Neovim Ignore Files
 **/nvim/*.json
-
-# MPV Ignore Files
-**/mpv/cache
-**/mpv/watch_later
-**/mpv/window_size.conf

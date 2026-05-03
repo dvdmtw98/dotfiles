@@ -109,12 +109,6 @@
                 "source": "Windows.Terminal.Wsl"
             },
             {
-                "commandline": "wsl -d kali-linux kex --esm --wtstart -s",
-                "guid": "{55ca431a-3a87-5fb3-83cd-11ecedd031d2}",
-                "hidden": false,
-                "name": "Win-KeX"
-            },
-            {
                 "guid": "{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
                 "hidden": false,
                 "name": "Git Bash",
