@@ -557,6 +557,7 @@
         "WindowHeight": 720.0,
         "ShowExitConfirmation": true,
         "ZoomToFitOnOpen": false,
+        "QuickCrop": true,
         "AutoCloseEditorOnTask": false,
         "AutoCopyImageToClipboard": false,
         "LastUsedAnnotationTool": "Rectangle",
@@ -565,10 +566,12 @@
         "Thickness": 2,
         "CornerRadius": 4,
         "Shadow": false,
+        "ArrowStyle": "Classic",
         "TextBorderColorHex": "#FFF23C3C",
         "TextTextColorHex": "#FFFAFAFA",
         "TextThickness": 8,
         "TextFontSize": 48.0,
+        "TextFontFamily": "Segoe UI",
         "TextBold": true,
         "TextItalic": false,
         "TextUnderline": false,
@@ -577,6 +580,7 @@
         "SpeechBalloonTextColorHex": "#FFFAFAFA",
         "SpeechBalloonThickness": 4,
         "SpeechBalloonFontSize": 48.0,
+        "SpeechBalloonFontFamily": "Segoe UI",
         "StepBorderColorHex": "#00FFFFFF",
         "StepFillColorHex": "#FFF23C3C",
         "StepTextColorHex": "#FFFAFAFA",
@@ -611,7 +615,8 @@
           "flip_vertical"
         ]
       },
-      "UseLegacyImageEditor": false
+      "UseLegacyImageEditor": false,
+      "ShowImageEditorSelector": true
     },
     "UseDefaultAdvancedSettings": true,
     "AdvancedSettings": {
@@ -1066,5 +1071,5 @@
   "DropAlignment": "BottomRight",
   "DropOpacity": 100,
   "DropHoverOpacity": 255,
-  "ApplicationVersion": "20.0.4"
+  "ApplicationVersion": "20.1.0"
 }
