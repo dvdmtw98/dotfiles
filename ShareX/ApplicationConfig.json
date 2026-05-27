@@ -549,7 +549,9 @@
         "AutoCopyResult": false
       },
       "ImageEditorOptions": {
+        "Theme": "Dark",
         "UseSystemTheme": true,
+        "AccentColorHex": "#3E83F2",
         "UseSystemAccentColor": true,
         "RememberWindowState": true,
         "IsWindowMaximized": true,
@@ -560,8 +562,9 @@
         "QuickCrop": true,
         "AutoCloseEditorOnTask": false,
         "AutoCopyImageToClipboard": false,
+        "ShowInsertImageDialog": true,
         "LastUsedAnnotationTool": "Rectangle",
-        "BorderColorHex": "#FFFFB900",
+        "BorderColorHex": "#FFD13438",
         "FillColorHex": "#00FFFFFF",
         "Thickness": 2,
         "CornerRadius": 4,
@@ -602,7 +605,9 @@
         "BackgroundImagePath": "",
         "RecentImageFiles": [],
         "MaxRecentImageFiles": 10,
-        "RecentEffects": [],
+        "RecentEffects": [
+          "border"
+        ],
         "FavoriteEffects": [
           "resize_image",
           "resize_canvas",
@@ -616,7 +621,7 @@
         ]
       },
       "UseLegacyImageEditor": false,
-      "ShowImageEditorSelector": true
+      "ShowImageEditorSelector": false
     },
     "UseDefaultAdvancedSettings": true,
     "AdvancedSettings": {
@@ -688,7 +693,7 @@
   },
   "FirstTimeRunDate": "2026-05-01T04:53:23.2874432Z",
   "FileUploadDefaultDirectory": "",
-  "NameParserAutoIncrementNumber": 10,
+  "NameParserAutoIncrementNumber": 32,
   "QuickTaskPresets": [
     {
       "Name": "Save, Upload, Copy URL",
@@ -1071,5 +1076,5 @@
   "DropAlignment": "BottomRight",
   "DropOpacity": 100,
   "DropHoverOpacity": 255,
-  "ApplicationVersion": "20.1.0"
+  "ApplicationVersion": "20.2.0"
 }
