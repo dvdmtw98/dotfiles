@@ -565,7 +565,146 @@
         "AutoCopyImageToClipboard": false,
         "ShowInsertImageDialog": true,
         "ShowNotifications": true,
-        "ToolbarItems": [],
+        "ToolbarItems": [
+          {
+            "Id": "File",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": ""
+          },
+          {
+            "Id": "Select",
+            "BeginGroup": true,
+            "IsVisible": true,
+            "Hotkey": "V"
+          },
+          {
+            "Id": "Rectangle",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "R"
+          },
+          {
+            "Id": "Ellipse",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "E"
+          },
+          {
+            "Id": "Line",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "L"
+          },
+          {
+            "Id": "Arrow",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "A"
+          },
+          {
+            "Id": "Freehand",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "F"
+          },
+          {
+            "Id": "Text",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "T"
+          },
+          {
+            "Id": "SpeechBalloon",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "O"
+          },
+          {
+            "Id": "Step",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "N"
+          },
+          {
+            "Id": "Image",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "I"
+          },
+          {
+            "Id": "Emoji",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "J"
+          },
+          {
+            "Id": "Cursor",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "K"
+          },
+          {
+            "Id": "Highlight",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "H"
+          },
+          {
+            "Id": "SmartEraser",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "W"
+          },
+          {
+            "Id": "Blur",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "B"
+          },
+          {
+            "Id": "Pixelate",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "P"
+          },
+          {
+            "Id": "Magnify",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "M"
+          },
+          {
+            "Id": "Spotlight",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "S"
+          },
+          {
+            "Id": "Crop",
+            "BeginGroup": true,
+            "IsVisible": true,
+            "Hotkey": "C"
+          },
+          {
+            "Id": "CutOut",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": "U"
+          },
+          {
+            "Id": "Background",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": ""
+          },
+          {
+            "Id": "ImageEffects",
+            "BeginGroup": false,
+            "IsVisible": true,
+            "Hotkey": ""
+          }
+        ],
         "BorderColorHex": "#FFD13438",
         "FillColorHex": "#00FFFFFF",
         "Thickness": 2,
@@ -717,7 +856,7 @@
   },
   "FirstTimeRunDate": "2026-05-01T04:53:23.2874432Z",
   "FileUploadDefaultDirectory": "",
-  "NameParserAutoIncrementNumber": 56,
+  "NameParserAutoIncrementNumber": 58,
   "QuickTaskPresets": [
     {
       "Name": "Save, Upload, Copy URL",
