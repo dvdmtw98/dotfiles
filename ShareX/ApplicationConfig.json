@@ -549,7 +549,7 @@
         "AutoCopyResult": false
       },
       "ImageEditorOptions": {
-        "LastUsedAnnotationTool": "Blur",
+        "LastUsedAnnotationTool": "Rectangle",
         "Theme": "Dark",
         "UseSystemTheme": true,
         "AccentColorHex": "#3E83F2",
@@ -856,7 +856,7 @@
   },
   "FirstTimeRunDate": "2026-05-01T04:53:23.2874432Z",
   "FileUploadDefaultDirectory": "",
-  "NameParserAutoIncrementNumber": 77,
+  "NameParserAutoIncrementNumber": 107,
   "QuickTaskPresets": [
     {
       "Name": "Save, Upload, Copy URL",
