@@ -39,21 +39,26 @@ end
 
 local function get_battery_windows()
     local command = utils.subprocess({
-        args = {"cmd", "/C", "WMIC PATH Win32_Battery Get EstimatedChargeRemaining,BatteryStatus /FORMAT:LIST"},
+        args = {"powershell.exe", "-NoProfile", "-NonInteractive", "-Command",
+                'Get-CimInstance Win32_Battery | Select-Object -First 1 | ForEach-Object { "$($_.EstimatedChargeRemaining)|$($_.BatteryStatus)" }'},
         cancellable = false
     })
 
-    local state = "Unknown"
-    local percent = command.stdout:match("EstimatedChargeRemaining=(%d+)")
-    local status = command.stdout:match("BatteryStatus=(%d+)")
+    local percent, status = command.stdout:match("(%d+)|(%d+)")
 
-    if status == "1" then
-        state = "Discharging"
-    elseif status == "2" then
-        state = "Charging"
-    end
+    local states = {
+        [1] = "Discharging",
+        [2] = "On AC",
+        [3] = "Fully Charged",
+        [4] = "Discharging",
+        [5] = "Discharging",
+        [6] = "Charging",
+        [7] = "Charging",
+        [8] = "Charging",
+        [9] = "Charging"
+    }
 
-    return percent, state
+    return percent, states[tonumber(status)] or "Unknown"
 end
 
 local function get_battery_linux()
