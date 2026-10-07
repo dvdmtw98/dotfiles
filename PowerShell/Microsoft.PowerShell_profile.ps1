@@ -1,7 +1,7 @@
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
 [Console]::InputEncoding = [Text.Encoding]::UTF8
 
-oh-my-posh init pwsh --config "$HOME\Code\Dotfiles\PowerShell Theme\zen.toml" | Invoke-Expression
+oh-my-posh init pwsh --config "D:\Code\Dotfiles\PowerShell Theme\zen.toml" | Invoke-Expression
 
 # Clean history file by removing duplicates
 $HISTORY = (Get-PSReadLineOption).HistorySavePath
