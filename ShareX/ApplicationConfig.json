@@ -150,7 +150,7 @@
         "ShowInfo": true,
         "ShowMagnifier": true,
         "UseSquareMagnifier": false,
-        "MagnifierPixelCount": 9,
+        "MagnifierPixelCount": 11,
         "MagnifierPixelSize": 10,
         "ShowCenterCrosshair": false,
         "ShowCrosshair": false,
@@ -856,7 +856,7 @@
   },
   "FirstTimeRunDate": "2026-05-01T04:53:23.2874432Z",
   "FileUploadDefaultDirectory": "",
-  "NameParserAutoIncrementNumber": 138,
+  "NameParserAutoIncrementNumber": 159,
   "QuickTaskPresets": [
     {
       "Name": "Save, Upload, Copy URL",
